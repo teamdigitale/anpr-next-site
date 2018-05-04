@@ -1,0 +1,12 @@
+{% assign buildTime =  site.time | date: '%Y%m%d%H%M' %}
+
+<script src="{{ site.baseurl }}/assets/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
+<script src="{{ site.baseurl }}/assets/js/scrollPosStyler.min.js?{{ buildTime }}"></script>
+<script>
+  // init script for Sticky observer  plugin
+  ScrollPosStyler.init(
+    {
+      'scrollOffsetY': 400,
+    }
+  );
+</script>

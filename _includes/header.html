@@ -1,0 +1,21 @@
+<header class="header-main pt-3 pb-0 pt-md-5 sps sps--abv">
+    <div class="container">
+        <div class="row w-100 align-items-end">
+        <div class="col-md-7">
+        <h1 class="main-brand"><a href="/" title="Torna in homepage" >{{site.main_brand}}</a></h1>
+        <h2 class="main-brand__payoff">{{site.main_brand__payoff}}</h2>
+        </div>
+        <div class="col-md-5">
+            <ul class="list-inline list-at-right float-none float-md-right">
+                <li><a href="/contatti">Contatti</a></li>
+                <li class="list-socials ">{{site.main_socials.string}} 
+                    {% for social in site.main_socials.socials %}
+                        <a href="{{social.url}}" title="{{social.name}}"><img src="{{social.icon | relative_url}}" alt="{{social.name}}" ></a>
+                    {% endfor %}
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    {% include navbar.html %}
+</header>
