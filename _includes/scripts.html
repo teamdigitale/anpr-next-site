@@ -1,7 +1,8 @@
 {% assign buildTime =  site.time | date: '%Y%m%d%H%M' %}
 
 <script src="{{ site.baseurl }}/assets/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
-<script src="{{ site.baseurl }}/assets/js/scrollPosStyler.min.js?{{ buildTime }}"></script>
+<script src="{{ site.baseurl }}/assets/js/scrollPosStyler.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/jquery.easy-autocomplete.min.js"></script>
 <script>
   // init script for Sticky observer  plugin
   ScrollPosStyler.init(
@@ -9,4 +10,52 @@
       'scrollOffsetY': 400,
     }
   );
+  // SECTION A CHE PUNTO
+  $(function() {
+    var $comunesearch = $("#comunesearch");
+    var $comunestatus = $('#comunesearch_status');
+    var $achepuntoform = $('.achepunto__form');
+    var $achepuntoname = $('.achepunto__name');
+    var $success = $('.achepunto__status--success');
+    var $fail = $('.achepunto__status--fail');
+    var $close = $('.status-close');
+    var options = {
+      url: "/assets/comuni.json",
+      minCharNumber: '3',
+      getValue: "Name",
+      highlightPhrase: false,
+      list: {
+          match: {
+              enabled: true
+          },
+          onChooseEvent: function() {
+            var value = $comunesearch.getSelectedItemData().DataSubentro;
+            $comunestatus.val(value);
+          }
+      },
+    };
+    $comunesearch.easyAutocomplete(options);
+    
+    $achepuntoform.on('submit', function(e){
+      e.preventDefault();
+
+      $achepuntoname.text( $comunesearch.val() );
+      if ($comunestatus.val()!='' && $comunestatus!==undefined) {
+        $success.show();
+        $achepuntoform.hide();
+      } else {
+        $fail.show();
+        $achepuntoform.hide();
+      }
+      
+    });
+
+    $close.on('click', function(e) {
+      e.preventDefault();
+      $(this).parents('.achepunto__status').hide();
+      $achepuntoform.show();
+    });
+    
+  });
+
 </script>

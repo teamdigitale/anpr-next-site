@@ -1,0 +1,34 @@
+<article id="achepunto" class="achepunto bg-dark">
+    <div class="container achepunto__wrapper">
+        <div class="container-fluid">
+        <h1>A che punto è il tuo comune?</h1>
+        <p class="lead achepunto__lead">Inserisci il nome del tuo Comune nella barra sottostante e scopri se è già entrato nell’anagrafe nazionale o a che punto è del percorso.</p>
+        <form class="bg-white achepunto__form p-4 position-relative">
+            <div class="d-flex flex-row">
+                <input type="text" class="form-control" id="comunesearch" name="comunesearch" placeholder="Inserisci il nome del tuo Comune" required>
+                <input type="hidden" id="comunesearch_status" name="comunesearch_status" value="">
+                <button type="submit" class="btn btn-primary ">Scopri</button>
+            </div>
+        </form>
+
+        <div class="achepunto__status achepunto__status--success bg-white p-4 ">
+            <a class="achepunto__status_close status-close float-right" href="#" title="Chiudi"><img src="{{'assets/images/icons/ico-close.svg' | relative_url}}"></a>
+            <h2>Ottimo!</h2>
+            <p class="lead achepunto__status_lead">Il tuo Comune – <span class="achepunto__name"></span> – fa parte dell'anagrafe nazionale.</p>
+            <div class="pt-4 pb-4">
+                <button type="button" class="btn btn-primary mb-2 ">Visualizza i tuoi dati anagrafici</button>
+                <button type="button" class="btn btn-outline-primary mb-2 status-close">Fai una nuova ricerca</button>
+            </div>
+        </div>
+        <div class="achepunto__status achepunto__status--fail bg-white p-4 ">
+            <a class="achepunto__status_close status-close float-right" href="#" title="Chiudi"><img src="{{'assets/images/icons/ico-close.svg' | relative_url}}"></a>
+            <h2>In fase di attivazione</h2>
+            <p class="lead achepunto__status_lead">Il tuo Comune  – <span class="achepunto__name"></span> – non è ancora nell'anagrafe nazionale.
+                    Per avere informazioni sui tuoi dati anagrafici visita il sito del tuo Comune.</p>
+            <div class="pt-4 pb-4">
+                <button type="button" class="btn btn-outline-primary mb-2 status-close">Fai una nuova ricerca</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</article>

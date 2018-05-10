@@ -183,6 +183,120 @@ $italia-darken: #0054A8;
     }
 }
 
+.main-section {
+    &__wrapper {
+        padding: 3rem 0;
+
+        
+    }
+}
+.achepunto {
+    &__wrapper {
+        padding: 4rem 0;
+
+        @include media-breakpoint-down(md) { 
+            padding: 2rem 0;
+		}
+
+    }
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #fff;
+
+        @include media-breakpoint-down(md) { 
+            font-size: 2rem;
+            margin-bottom: .7rem;
+		}
+        
+    }
+    &__lead {
+        color: #fff;
+        width: 75%;
+        margin-bottom: 2rem;
+
+        @include media-breakpoint-down(md) { 
+            width: 100%;
+            font-size: 1rem;
+		}
+
+    }
+    &__status {
+        display: none;
+        color: #17324D;
+
+        &_close {
+            img {
+                width: 1.6rem;
+            }
+        }
+    }
+    &__form {
+        #comunesearch {
+            border-bottom: 1px solid #0066CC;
+            font-size: 1.6rem;
+            font-style: italic;
+            font-weight: 600;
+            color: #0066CC;
+
+            &::-webkit-input-placeholder {
+                font-weight: 300;
+                color: #0066CC;
+                opacity: 0.5;
+            }
+            &::-moz-placeholder {
+                font-weight: 300;
+                color: #0066CC;
+                opacity: 0.5;
+            }
+            &:-ms-input-placeholder {
+                font-weight: 300;
+                color: #0066CC;
+                opacity: 0.5;
+            }
+            @include media-breakpoint-down(sm) { 
+                font-size: 1.1rem;
+            }
+        }
+        button {
+           
+            padding-left: 3rem;
+            padding-right: 3rem;
+            margin-left: 2rem;
+        }
+        .easy-autocomplete {
+            width: 100% !important;
+        }
+        .easy-autocomplete-container {
+            
+            ul {
+                position: absolute;
+                width: 100%;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                right: 0;
+                left: 0;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+
+                li {
+                    background-color: #fff;
+                }
+                .eac-item {
+                    font-size: 1.5rem;
+                    padding: 0.4rem 2rem;
+                    cursor: pointer;
+                    color: #5A6772;
+                    &:hover {
+                        color: #0066CC;
+                        text-decoration: underline
+                    }
+                }
+            }
+        }
+    }
+}
 
 // ANIMATIONS
 @-webkit-keyframes fadeInDown {
