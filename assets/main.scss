@@ -121,6 +121,10 @@ $italia-darken: #0054A8;
     }
 }
 .apertura {
+    background-image: url('/assets/images/apertura.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
     h1 {
         font-size: 3rem;
         margin-bottom: 2rem;
@@ -184,13 +188,82 @@ $italia-darken: #0054A8;
 }
 
 .main-section {
-    &__wrapper {
-        padding: 3rem 0;
+    
+}
+.entra {
+    background-color: #F6F6F6;
+    padding: 4rem 0;
+    background-image: url('/assets/images/entra-angle.svg');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    color: #17324D;
 
+    .lead {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #17324D;
+
+        @include media-breakpoint-down(md) { 
+            font-size: 2rem;
+            margin-bottom: .7rem;
+		}
         
+    }
+    h2 {
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+    &__spid {
+        font-size: 0.9rem;
+
+        .small {
+            font-size: 0.75rem;
+        }
+        hr {
+            border: 1px solid #CFDCE6;
+            margin: 2rem 0;
+        }
+        @include media-breakpoint-down(md) { 
+            font-size: 1.1rem;
+		}
+        
+    }
+    &__inner {
+        padding: 0 4rem;
+    }
+    &__angle-left {
+        position: absolute;
+        z-index: 0;
+        left: -1.5rem;
+        top: -1.5rem;
+        display: block;
+        @include media-breakpoint-down(sm) { 
+            display: none;
+		}
+    }
+
+    &__wrapper {
+        padding: 4rem 0;
+        box-shadow: 0 2px 4px 0 rgba(156,156,156,0.5);
+        background-color: #fff;
+        z-index: 1;
+
+        @include media-breakpoint-down(md) { 
+            padding: 2rem 0;
+		}
     }
 }
 .achepunto {
+    background-image: url('/assets/images/achepunto.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     &__wrapper {
         padding: 4rem 0;
 
