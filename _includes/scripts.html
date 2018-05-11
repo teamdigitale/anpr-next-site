@@ -53,6 +53,8 @@
     $close.on('click', function(e) {
       e.preventDefault();
       $(this).parents('.achepunto__status').hide();
+      $comunesearch.val('');
+      $comunestatus.val('');
       $achepuntoform.show();
     });
     
