@@ -268,6 +268,58 @@ $italia-darken: #0054A8;
             }
         }
     }
+    #accordionStrumenti {
+        .card-deck {
+            color: #333333;
+            .card {
+                border: none;
+                box-shadow: 0 2px 4px 0 rgba(156,156,156,0.5);
+                border-radius: 4px;
+            }
+            .card-title {
+                font-size: 1.5rem;
+                
+                font-weight: 600;
+            }
+            ul {
+                li {
+                    color: #0066CC;
+                    list-style-type: square;
+                }
+            }
+        }
+    }
+    .news__post {
+        &__tag {
+            color: #555759;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+        }
+        &__title {
+            margin-bottom: 1rem;
+            a {
+            color: #333333 ;
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 1.3;
+            }
+        }
+        &__body {
+            color: #333333;
+            margin-bottom: 1rem;
+        }
+        &__more {
+            
+            a {
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                font-weight: 600;
+            }
+        }
+    }
     .statoavanzamento {
         &__numeri{
             & > :first-child {
@@ -305,6 +357,46 @@ $italia-darken: #0054A8;
         &__disclaimer {
             text-align: right;
             font-size: 0.9rem;
+        }
+        &__oggi_domani {
+            color: #333333;
+            font-size: 2.2rem;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+        &__maps {
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                background-color: #42414D;
+                position: absolute;
+                z-index: -1;
+                display: block;
+                width: 100%;
+                content: '';
+                top: 20%;
+                bottom: 20%;
+            }
+
+            &__text {
+                color: #fff;
+
+                .num {
+                    font-size: 2.7rem;
+                    font-weight: 700;
+                }
+                .tit {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    line-height: 1.3;
+                }
+                .desc {
+                    font-size: 0.9rem;
+                    line-height: 1.3;
+                }
+            }
         }
     }
 
