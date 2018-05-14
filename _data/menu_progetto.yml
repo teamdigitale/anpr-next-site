@@ -1,0 +1,12 @@
+- name: I vantaggi
+  class: 
+  url: '/progetto/'
+- name: Stato di avanzamento
+  class: 
+  url: '/progetto/stato-di-avanzamento'
+- name: Strumenti di lavoro
+  class: 
+  url: '/progetto/strumenti-di-lavoro'
+- name: News
+  class: 
+  url: '/progetto/news'

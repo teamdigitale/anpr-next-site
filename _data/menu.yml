@@ -1,6 +1,6 @@
 - name: Home
   class: 
-  url: '/'
+  url: '#home'
 - name: Il progetto
   class: 
   url: '#progetto'
