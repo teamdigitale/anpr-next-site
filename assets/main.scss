@@ -107,7 +107,7 @@ $italia-darken: #0054A8;
 #main-navbar {
 
     .nav-item {
-        &.active {
+        .active {
             border-bottom: 4px solid #0BD9D3;
         }
     }
@@ -377,6 +377,12 @@ $italia-darken: #0054A8;
                 content: '';
                 top: 20%;
                 bottom: 20%;
+            }
+            &__map {
+                iframe {
+                    border: 0;
+                    box-shadow: 0 2px 4px 0 rgba(156,156,156,0.5);
+                }
             }
 
             &__text {
