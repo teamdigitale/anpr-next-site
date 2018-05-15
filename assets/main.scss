@@ -5,6 +5,11 @@
 
 $italia-darken: #0054A8;
 
+
+.small-2 {
+    font-size: 0.8rem;
+}
+
 .bg-primary-darken {
     background-color: $italia-darken;
 }
@@ -128,6 +133,11 @@ $italia-darken: #0054A8;
         border-bottom: 2px solid #E5E5E5;
         background: -ms-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 61%, rgba(254,254,254,1) 100%);
         background: linear-gradient(to bottom, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 61%, rgba(254,254,254,1) 100%);
+
+        @include media-breakpoint-down(md) { 
+            border-bottom: none;
+		}
+        
     }
 
     .nav-item {
@@ -154,6 +164,28 @@ $italia-darken: #0054A8;
         }
     }
 }
+
+body.layout--internal {
+
+    .title {
+        font-size: 3rem;
+        letter-spacing: 0;
+    }
+    .subtitle {
+        font-size: 1.4rem;
+        font-weight: 300;
+        letter-spacing: 0;
+    }
+    .section-header {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        @include media-breakpoint-down(md) { 
+            margin-top: 1.5rem;
+            margin-bottom: 2.5rem;
+		}
+    }
+}
+
 .apertura {
     background-image: url('/assets/images/apertura.jpg');
     background-position: top center;
@@ -354,92 +386,94 @@ $italia-darken: #0054A8;
             }
         }
     }
-    .statoavanzamento {
-        &__numeri{
-            & > :first-child {
-                .statoavanzamento__item {
-                    background-color: #0C00D3;
-                    color: #fff;
-                }
-            }
-            & > :last-child {
-                .statoavanzamento__item {
-                    background-color: #0BD9D3;
-                    color: #000;
-                }
-            }
-        }
-        &__item {
-            padding: 1.5rem 2.5rem;
-            
-        }
-        &__title {
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: 1.5rem;
-        }
-        &__date {
-            font-size: 0.8rem;
-            opacity: 0.5;
-        }
-        &__num {
-            text-align: right;
-            font-size: 3rem;
-            font-weight: 600;
-            margin-top: 2rem;
-        }
-        &__disclaimer {
-            text-align: right;
-            font-size: 0.9rem;
-        }
-        &__oggi_domani {
-            color: #333333;
-            font-size: 2.2rem;
-            margin-top: 4rem;
-            margin-bottom: 2rem;
-        }
-        &__maps {
-            position: relative;
-            z-index: 1;
+    
 
-            &:before {
-                background-color: #42414D;
-                position: absolute;
-                z-index: -1;
-                display: block;
-                width: 100%;
-                content: '';
-                top: 20%;
-                bottom: 20%;
-            }
-            &__map {
-                iframe {
-                    border: 0;
-                    box-shadow: 0 2px 4px 0 rgba(156,156,156,0.5);
-                }
-            }
-
-            &__text {
+}
+.statoavanzamento {
+    &__numeri{
+        & > :first-child {
+            .statoavanzamento__item {
+                background-color: #0C00D3;
                 color: #fff;
-
-                .num {
-                    font-size: 2.7rem;
-                    font-weight: 700;
-                }
-                .tit {
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                    margin-bottom: 1rem;
-                    line-height: 1.3;
-                }
-                .desc {
-                    font-size: 0.9rem;
-                    line-height: 1.3;
-                }
+            }
+        }
+        & > :last-child {
+            .statoavanzamento__item {
+                background-color: #0BD9D3;
+                color: #000;
             }
         }
     }
+    &__item {
+        padding: 1.5rem 2.5rem;
+        
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+    &__date {
+        font-size: 0.8rem;
+        opacity: 0.5;
+    }
+    &__num {
+        text-align: right;
+        font-size: 3rem;
+        font-weight: 600;
+        margin-top: 2rem;
+    }
+    &__disclaimer {
+        text-align: right;
+        font-size: 0.9rem;
+    }
+    &__oggi_domani {
+        color: #333333;
+        font-size: 2.2rem;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+    &__maps {
+        position: relative;
+        z-index: 1;
 
+        &:before {
+            background-color: #42414D;
+            position: absolute;
+            z-index: -1;
+            display: block;
+            width: 100%;
+            content: '';
+            top: 20%;
+            bottom: 20%;
+            left: 0;
+        }
+        &__map {
+            iframe {
+                border: 0;
+                box-shadow: 0 2px 4px 0 rgba(156,156,156,0.5);
+            }
+        }
+
+        &__text {
+            color: #fff;
+
+            .num {
+                font-size: 2.7rem;
+                font-weight: 700;
+            }
+            .tit {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                line-height: 1.3;
+            }
+            .desc {
+                font-size: 0.9rem;
+                line-height: 1.3;
+            }
+        }
+    }
 }
 .entra {
     background-color: #F6F6F6;
@@ -619,6 +653,111 @@ $italia-darken: #0054A8;
                         text-decoration: underline
                     }
                 }
+            }
+        }
+    }
+}
+
+.vantaggi-index {
+    border-top: 1px solid #E5E5E5; ;
+
+
+    h2 {
+        line-height: 1.3;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    &__cell {
+        width: (1140px/2);
+        max-width: 50vw;
+        padding: 4rem;
+        padding-left: 1rem;
+
+        @include media-breakpoint-down(lg) { 
+            width: (960px/2);
+        }
+        @include media-breakpoint-down(md) { 
+            width: 100%;
+            max-width: 100%;
+            float: none;
+            padding: 2rem 1rem;
+        }
+    }
+    &__img {
+        background-image: url(http://placehold.it/1200x600&text=IMG);
+        background-repeat: no-repeat;
+        min-height: 600px;
+
+        @include media-breakpoint-down(md) {
+            min-height: auto;
+            height: 30vh;
+            background-size: cover;
+            background-position-x: center;
+        }
+    }
+    &__container > *:nth-child(even) {
+        .vantaggi-index__img {
+            background-position-x: right;
+            @include media-breakpoint-down(md) { 
+                background-position-x: center;
+            }
+        }
+        
+    }
+}
+
+.strumentilavoro {
+    overflow-x: hidden;
+
+    &__cell {
+        color: #fff;
+        padding: 4rem;
+        position: relative;
+        z-index: 1;
+        &:before {
+            content: ' ';
+            z-index: -1;
+            position: absolute;  
+            width: 100vw;
+            height: 100%;
+            bottom: 0;
+            
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0;
+            margin: 1.2rem 0;
+        }
+        h5 {
+            font-size: 0.8rem;
+            letter-spacing: 0;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        &.sx {
+            background-color: #0C00D3 ;
+            padding-left: 1rem;
+
+            &:before {
+                right: 0;
+                background-color:  #0C00D3;
+            }
+        }
+        &.dx {
+            background-color: #0080FF;
+            padding-right: 1rem;
+            &:before {
+                left: 0;
+                background-color:  #0080FF;
             }
         }
     }

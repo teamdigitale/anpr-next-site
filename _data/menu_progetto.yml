@@ -3,10 +3,10 @@
   url: '/progetto/'
 - name: Stato di avanzamento
   class: 
-  url: '/progetto/stato-di-avanzamento'
+  url: '/progetto/stato-di-avanzamento.html'
 - name: Strumenti di lavoro
   class: 
-  url: '/progetto/strumenti-di-lavoro'
+  url: '/progetto/strumenti-di-lavoro.html'
 - name: News
   class: 
-  url: '/progetto/news'
+  url: '/progetto/news.html'
