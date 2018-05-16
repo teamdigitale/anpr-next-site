@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="18px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>icons</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pagine-WIP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Gli-strumenti" transform="translate(-764.000000, -778.000000)">
+            <g id="Group" transform="translate(752.000000, 762.760000)">
+                <g transform="translate(0.178204, 0.000000)" id="icons">
+                    <g>
+                        <rect id="Rectangle" x="12" y="12" width="24" height="24"></rect>
+                        <path d="M13,19.0001262 L13,29.9998738 C13,31.1107606 13.8884514,32 14.9910904,32 L33.0089096,32 C34.1063065,32 35,31.1041475 35,29.9998738 L35,19.0001262 C35,17.8892394 34.1115486,17 33.0089096,17 L14.9910904,17 C13.8936935,17 13,17.8958525 13,19.0001262 Z M12,19.0001262 C12,17.3432023 13.3417706,16 14.9910904,16 L33.0089096,16 C34.6608432,16 36,17.3339615 36,19.0001262 L36,29.9998738 C36,31.6567977 34.6582294,33 33.0089096,33 L14.9910904,33 C13.3391568,33 12,31.6660385 12,29.9998738 L12,19.0001262 Z M13,19 L24,25 L24,26 L13,20 L13,19 Z M35,19 L24,25 L24,26 L35,20 L35,19 Z" id="Combined-Shape" fill="#5A6772" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

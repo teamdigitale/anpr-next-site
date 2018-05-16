@@ -6,6 +6,7 @@
 <script>
   // init script for Sticky observer  plugin
   var pageOffset = 400;
+  var fixedTarget = '#main-navbar-wrapper';
   ScrollPosStyler.init(
     {
       'scrollOffsetY': pageOffset,
@@ -14,10 +15,25 @@
   // SCROLLSPY init
   $(function() {
     $('body').scrollspy({ 
-      target: '#main-navbar-wrapper',
+      target: fixedTarget,
       offset: pageOffset 
       });
 
+  });
+
+  // SCROLLUP observer
+  $(function() {
+    var position = $(window).scrollTop();
+    var $header = $('header.header-main');
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if(scroll > position) {
+          $header.removeClass('scrollUp');
+        } else {
+          $header.addClass('scrollUp');
+        }
+        position = scroll;
+    });
   });
 
   // SMOOTHSCROLL
