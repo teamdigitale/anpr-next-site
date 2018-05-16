@@ -19,7 +19,7 @@ own_menu : menu_progetto
               </div>
               <div class="col-md-6 ">
                   <div class="statoavanzamento__item h-100 ml-md-3 mb-3 d-flex align-items-end flex-column">
-                      <div class="statoavanzamento__title mr-auto">Cittadini che stanno per ottenere l'Anagrafe Nazionale</div>
+                      <div class="statoavanzamento__title mr-auto">Cittadini che stanno per ottenere ANPR</div>
                       <div class="statoavanzamento__date mr-auto">Aggiornato Oggi 14:06</div>
                       <div class="mt-auto">
                       <div class="statoavanzamento__num mt-auto">7.106.939</div>
