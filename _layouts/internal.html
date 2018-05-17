@@ -17,7 +17,13 @@
           <h2 class="subtitle">{{page.subtitle}}</h2>
         {% endif %}
         </header>
-      {{ content }}
+        {% if page.wcontainer %}
+        <div class="container">
+        {{ content }}
+        </div>
+        {% else %}
+        {{ content }}
+        {%endif%}
       </div>
     </section>
 

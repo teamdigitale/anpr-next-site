@@ -7,6 +7,10 @@
         <div class="collapse navbar-collapse" id="main-navbar">
           <ul class="navbar-nav nav mr-auto" id="main-navbar-ul" role="tablist">
             {% for item in site.data.menu %}
+              {% assign item_url = item.url %}
+              {% if page.url='/' %}
+                {% assign item_url = item.url | remove_first: "/" %}
+              {% endif %}
             <li class="nav-item {{item.class}} ">
               <a class="nav-link {% if page.url=='/' and forloop.index==1%}active{%endif%}" 
                  href="{{item.url}}">{{item.name}}</a>

@@ -13,7 +13,15 @@ $italia-darken: #0054A8;
 .bg-primary-darken {
     background-color: $italia-darken;
 }
-
+.link-external {
+    &:after {
+        font-family: 'italia-icon-font';
+        content:'\e819';
+        display: inline;
+        font-size: .8em;
+        margin-left: .2em;
+    }
+}
 
 
 
@@ -129,13 +137,24 @@ $italia-darken: #0054A8;
 }
 .navbar-2level {
 
+    .navbar-toggler-icon {
+        vertical-align: bottom;
+    }
+    .navbar-brand {
+        color: $gray-secondary;
+    }
+    .nav-link {
+        @include media-breakpoint-down(md) { 
+            padding: 1rem 0.5rem !important;
+        }
+    }
     &__wrapper {
         border-bottom: 2px solid #E5E5E5;
         background: -ms-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 61%, rgba(254,254,254,1) 100%);
         background: linear-gradient(to bottom, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 61%, rgba(254,254,254,1) 100%);
 
         @include media-breakpoint-down(md) { 
-            border-bottom: none;
+            border-bottom-width: 1px;
 		}
         
     }
@@ -159,6 +178,9 @@ $italia-darken: #0054A8;
                     content: '';
                     left: 0;
                     bottom: -2px;
+                }
+                @include media-breakpoint-down(md) { 
+                    display: none;
                 }
             }
         }

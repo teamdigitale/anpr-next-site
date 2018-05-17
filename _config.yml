@@ -31,11 +31,8 @@ main_socials:
   string: 'Segui ANPR su:'
   socials:
     - name: github
-      url: https://github.com
+      url: https://github.com/italia/anpr
       icon: '/assets/images/icons/ico-github.svg'
-    - name: twitter
-      url: https://twitter.com
-      icon: '/assets/images/icons/ico-twitter.svg'
 
 # Build settings
 markdown: kramdown

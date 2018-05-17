@@ -32,19 +32,19 @@ own_menu : menu_progetto
 <div class="mt-2 mb-2 mt-md-3 mb-md-3">
               <h3 class="text-center statoavanzamento__oggi_domani">Oggi e domani</h3>
               <div class="statoavanzamento__maps container-fluid">
-                  <div class="d-flex justify-content-center align-items-center" >
-                      <div class="statoavanzamento__maps__text text-right">
+                  <div class="d-block d-md-flex justify-content-center align-items-center" >
+                      <div class="statoavanzamento__maps__text text-center text-md-right">
                           <div class="num">47</div>
                           <div class="tit">Comuni attivati</div>
                           <div class="desc mt-5">Comuni che hanno attivato <br> l'anagrafe nazionale </div>
                       </div>
-                      <div class="statoavanzamento__maps__map m-3">
+                      <div class="statoavanzamento__maps__map m-3 text-center text-md-left">
                           <iframe  width="400" height="500" src="https://dashboard.teamdigitale.governo.it/public/question/ab2b5bcc-ca54-41c3-8c57-5c5f5af803f3" ></iframe>
                       </div>
-                      <div class="statoavanzamento__maps__map m-3">
+                      <div class="statoavanzamento__maps__map m-3 text-center text-md-left">
                         <iframe  width="400" height="500" src="https://dashboard.teamdigitale.governo.it/public/question/e0a47d31-ec11-4eed-8b3c-56679a8ef2d0" ></iframe>
                       </div>
-                      <div class="statoavanzamento__maps__text text-left">
+                      <div class="statoavanzamento__maps__text text-center text-md-left">
                           <div class="num">1.010</div>
                           <div class="tit">Comuni in corso <br> di attivazione</div>
                           <div class="desc">Comuni che stanno per completare <br> l'adesione all'anagrafe nazionale</div>
