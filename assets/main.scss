@@ -202,6 +202,11 @@ body.layout--internal {
         font-size: 3rem;
         margin-bottom: 2rem;
         color: #fff;
+        @include media-breakpoint-down(md) { 
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+		}
     }
     .cards {
         top: -5rem;
@@ -459,6 +464,7 @@ body.layout--internal {
             iframe {
                 border: 0;
                 box-shadow: 0 2px 4px 0 rgba(156,156,156,0.5);
+                max-width: 100%;
             }
         }
 
@@ -478,6 +484,9 @@ body.layout--internal {
             .desc {
                 font-size: 0.9rem;
                 line-height: 1.3;
+            }
+            @include media-breakpoint-down(md) { 
+                color: #000;
             }
         }
     }
@@ -527,6 +536,9 @@ body.layout--internal {
     }
     &__inner {
         padding: 0 4rem;
+        @include media-breakpoint-down(md) { 
+            padding: 0 1rem;
+        }
     }
     &__angle-left {
         position: absolute;
@@ -548,6 +560,9 @@ body.layout--internal {
         @include media-breakpoint-down(md) { 
             padding: 2rem 0;
 		}
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 0;
     }
 }
 .achepunto {
